@@ -1,6 +1,6 @@
 name: "🐞 Bug Report"
 description: "Submit a bug report for Rebase Testing"
-title: "🐞 [BUG][NPC/MOB/QUEST/MISSION] <brief description>"
+title: "🐞 [BUG] <Title>"
 labels: ["bug"]
 assignees: ["slashtangent", "0x05010705"]
 

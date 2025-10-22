@@ -16,7 +16,8 @@ jobs:
         id: extract
         run: |
           BODY="${{ github.event.issue.body }}"
-          CATEGORY=$(echo "$BODY" | grep -oP '(?<=### Bug Category\s*\n\n)[A-Za-z]+')
+          # Extract everything after "### Bug Category" up to the next blank line
+          CATEGORY=$(echo "$BODY" | awk '/^### Bug Category/{getline; getline; print $0; exit}' | xargs)
           echo "Detected category: $CATEGORY"
           echo "label=$CATEGORY" >> $GITHUB_OUTPUT
 
@@ -26,3 +27,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: ${{ steps.extract.outputs.label }}
+

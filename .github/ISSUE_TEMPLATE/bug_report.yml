@@ -27,11 +27,11 @@ body:
       label: "Bug Category"
       description: "Select the type of bug."
       options:
-        - NPC
-        - MOB
-        - QUEST
-        - MISSION
-        - OTHER
+        - label: "NPC"
+        - label: "MOB"
+        - label: "QUEST"
+        - label: "MISSION"
+        - label: "OTHER"
     validations:
       required: true
 
@@ -42,4 +42,33 @@ body:
       description: "A detailed description of what the bug is and what happens."
       placeholder: "Describe the problem in detail..."
     validations:
-      required
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Please be as detailed as possible. Include exact steps."
+      placeholder: |
+        1. Go to ...
+        2. Talk to ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "Expected Behavior"
+      description: "What should be happening instead of this current behavior?"
+      placeholder: "Describe the correct or expected outcome."
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra_evidence
+    attributes:
+      label: "Extra Evidence (optional)"
+      description: "Copy and paste screenshots, upload videos, attach logs, etc."
+      placeholder: "Links or attachments here..."
+    # optional — no validations block

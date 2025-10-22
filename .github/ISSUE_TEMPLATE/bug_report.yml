@@ -1,0 +1,45 @@
+name: "🐛 Bug Report"
+description: "Submit a bug report for Rebase Testing"
+title: "🐛 [BUG][NPC/MOB/QUEST/MISSION] <brief description>"
+labels: ["bug"]
+assignees: ["slashtangent", "0x05010705"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report Form
+        Please fill out the following details as accurately as possible.
+        Reports that include clear steps and evidence help us resolve issues faster!
+
+  - type: input
+    id: character_name
+    attributes:
+      label: "HorizonXI Character Name"
+      description: "Include your in-game character name for points to be awarded."
+      placeholder: "Example: Shadowdelver"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug_category
+    attributes:
+      label: "Bug Category"
+      description: "Select the type of bug."
+      options:
+        - NPC
+        - MOB
+        - QUEST
+        - MISSION
+        - OTHER
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: "Bug Description"
+      description: "A detailed description of what the bug is and what happens."
+      placeholder: "Describe the problem in detail..."
+    validations:
+      required

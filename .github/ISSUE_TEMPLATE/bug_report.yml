@@ -31,6 +31,8 @@ body:
         - "MOB"
         - "QUEST"
         - "MISSION"
+        - "COMBAT"
+        - "CRAFTING"
         - "OTHER"
     validations:
       required: true

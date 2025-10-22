@@ -27,11 +27,11 @@ body:
       label: "Bug Category"
       description: "Select the type of bug."
       options:
-        - label: "NPC"
-        - label: "MOB"
-        - label: "QUEST"
-        - label: "MISSION"
-        - label: "OTHER"
+        - "NPC"
+        - "MOB"
+        - "QUEST"
+        - "MISSION"
+        - "OTHER"
     validations:
       required: true
 

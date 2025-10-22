@@ -1,6 +1,6 @@
 name: "🐞 Bug Report"
 description: "Submit a bug report for Rebase Testing"
-title: "🐞 [BUG] <Title>"
+title: ""
 labels: ["bug"]
 assignees: ["slashtangent", "0x05010705"]
 
@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 🐛 Bug Report Form
+        ### 🐛 Bug Report Form
         Please fill out the following details as accurately as possible.
         Reports that include clear steps and evidence help us resolve issues faster!
 

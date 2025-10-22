@@ -1,0 +1,28 @@
+name: Auto Label Bug Reports
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Extract bug category
+        id: extract
+        run: |
+          BODY="${{ github.event.issue.body }}"
+          CATEGORY=$(echo "$BODY" | grep -oP '(?<=### Bug Category\s*\n\n)[A-Za-z]+')
+          echo "Detected category: $CATEGORY"
+          echo "label=$CATEGORY" >> $GITHUB_OUTPUT
+
+      - name: Apply category label
+        if: steps.extract.outputs.label != ''
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: ${{ steps.extract.outputs.label }}

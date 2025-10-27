@@ -1,7 +1,6 @@
 name: "🐞 Bug Report"
 description: "Submit a bug report for Rebase Testing"
 labels: ["bug"]
-assignees: ["slashtangent", "0x05010705"]
 
 body:
   - type: markdown

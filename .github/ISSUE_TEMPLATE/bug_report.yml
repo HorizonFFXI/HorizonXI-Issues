@@ -27,6 +27,7 @@ body:
       options:
         - "NPC"
         - "MOB"
+        - "ITEM"
         - "QUEST"
         - "MISSION"
         - "COMBAT"

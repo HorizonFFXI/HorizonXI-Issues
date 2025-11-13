@@ -1,6 +1,6 @@
 name: "🐞 Bug Report"
 description: "Submit a bug report for Rebase Testing"
-labels: ["bug"]
+labels: ["New Issue"]
 
 body:
   - type: markdown

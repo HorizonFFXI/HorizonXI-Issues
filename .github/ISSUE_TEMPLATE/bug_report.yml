@@ -26,13 +26,13 @@ body:
       description: "Select the type of bug."
       options:
         - "NPC"
-        - "MOB"
-        - "ITEM"
-        - "QUEST"
-        - "MISSION"
-        - "COMBAT"
-        - "CRAFTING"
-        - "OTHER"
+        - "Mob"
+        - "Item"
+        - "Quest"
+        - "Mission"
+        - "Combat"
+        - "Crafting"
+        - "Other"
     validations:
       required: true
 
